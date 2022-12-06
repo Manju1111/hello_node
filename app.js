@@ -9,11 +9,15 @@ app.use(express.json())
 app.use(bodyParser.urlencoded({extended : true}))
 
 
-app.get('/helloworld',(req,res)=>{
-res.send('hello word on Web live')
-console.log('helloword get api call')
+app.get('/',(req,res)=>{
+res.send('Home render phage')
 })
 
+app.get('/helloworld',(req,res)=>{
+    res.send('hello word on Web live')
+    console.log('helloword get api call')
+    })
+    
 
 app.listen(PORT,()=>{
     console.log(`listining to port ${PORT}`)
